@@ -10,19 +10,21 @@ interface PageProps {
 }
 
 export default function Page(props: PageProps) {
-  const { signInWithGoogle } = React.useContext(FirebaseContext);
+  const { signInWithGoogle, firebaseUser } = React.useContext(FirebaseContext);
   const navigate = useNavigate();
   const location = useLocation();
   const googleSignIn = async () => {
-    const user = await signInWithGoogle();
-    if (user) {
-      if (location?.state.from) {
+    await signInWithGoogle();
+  };
+  React.useEffect(() => {
+    if (firebaseUser) {
+      if (location?.state?.from) {
         navigate(location.state.from);
       } else {
-        navigate("home");
+        navigate("../home");
       }
     }
-  };
+  }, [firebaseUser]);
   return (
     <div
       style={{

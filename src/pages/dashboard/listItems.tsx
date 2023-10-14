@@ -25,8 +25,8 @@ import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 
 const SideListItemButton = styled(ListItemButton)(({ theme }) => ({
-  paddingTop: "4px",
-  paddingBlock: "4px",
+  paddingTop: "0.125rem",
+  paddingBottom: "0.125rem",
   borderBottom: theme.palette.mode === "dark" ? "1px solid #585858" : "1px solid #d7d7d7",
   "& .MuiListItemIcon-root ": {
     minWidth: "30px",

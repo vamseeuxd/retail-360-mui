@@ -6,8 +6,15 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import LogoutIcon from "@mui/icons-material/Logout";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { mainListItems } from "./pages/dashboard/listItems";
-import { SwipeableDrawer, Tooltip } from "@mui/material";
+import {
+  Avatar,
+  Card,
+  CardHeader,
+  SwipeableDrawer,
+  Tooltip,
+} from "@mui/material";
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material/styles";
 import { FirebaseContext } from "./contexts/firebaseContext/firebaseContext";
@@ -72,7 +79,33 @@ const AppLayout: React.FC<Props> = ({ children, changeTheme }) => {
   const renderSideMenu = () => {
     return (
       <SwipeableDrawer onClose={toggleDrawer} onOpen={toggleDrawer} open={open}>
-        <List component="nav" style={{width:'250px'}}>{mainListItems}</List>
+        <List component="nav" style={{ width: "250px" }}>
+          <Card style={{ margin: "0.7rem" }}>
+            <CardHeader
+              avatar={
+                <Avatar aria-label="recipe">
+                  {firebaseUser && firebaseUser.photoURL && (
+                    <img
+                      src={firebaseUser?.photoURL}
+                      alt={firebaseUser?.photoURL}
+                      loading="lazy"
+                      width="100%"
+                      height="100%"
+                    />
+                  )}
+                </Avatar>
+              }
+              action={
+                <IconButton aria-label="settings">
+                  <MoreVertIcon />
+                </IconButton>
+              }
+              title={firebaseUser?.displayName}
+              subheader={firebaseUser?.email}
+            />
+          </Card>
+          {mainListItems}
+        </List>
       </SwipeableDrawer>
     );
   };
