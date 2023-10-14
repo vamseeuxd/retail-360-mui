@@ -25,6 +25,9 @@ import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 
 const SideListItemButton = styled(ListItemButton)(({ theme }) => ({
+  paddingTop: "4px",
+  paddingBlock: "4px",
+  borderBottom: theme.palette.mode === "dark" ? "1px solid #585858" : "1px solid #d7d7d7",
   "& .MuiListItemIcon-root ": {
     minWidth: "30px",
   },
@@ -33,23 +36,23 @@ const SideListItemButton = styled(ListItemButton)(({ theme }) => ({
 // prettier-ignore
 export const mainListItems = (
   <React.Fragment>
-    <Link to="/home"><SideListItemButton> <ListItemIcon> <DashboardIcon /> </ListItemIcon> <ListItemText primary="Dashboard"/></SideListItemButton></Link>
-    <Link to="/apartments"><SideListItemButton> <ListItemIcon> <LocationCityIcon /> </ListItemIcon> <ListItemText primary="Apartments"/></SideListItemButton></Link>
-    <Link to="/wings"><SideListItemButton> <ListItemIcon> <DomainAddIcon /> </ListItemIcon> <ListItemText primary="Wings"/></SideListItemButton></Link>
-    <Link to="/flats"><SideListItemButton> <ListItemIcon> <EmojiTransportationIcon /> </ListItemIcon> <ListItemText primary="Flats"/></SideListItemButton></Link>
-    <Link to="/members"><SideListItemButton> <ListItemIcon> <GroupIcon /> </ListItemIcon> <ListItemText primary="Members"/></SideListItemButton></Link>
-    <Link to="/owners"><SideListItemButton> <ListItemIcon> <GroupAddIcon /> </ListItemIcon> <ListItemText primary="Owners"/></SideListItemButton></Link>
-    <Link to="/accounts"><SideListItemButton> <ListItemIcon> <ChecklistIcon /> </ListItemIcon> <ListItemText primary="Accounts"/></SideListItemButton></Link>
-    <Link to="/visitors"><SideListItemButton> <ListItemIcon> <GroupRemoveIcon /> </ListItemIcon> <ListItemText primary="Visitors"/></SideListItemButton></Link>
-    <Link to="/notices"><SideListItemButton> <ListItemIcon> <MarkEmailUnreadIcon /> </ListItemIcon> <ListItemText primary="Notices"/></SideListItemButton></Link>
-    <Link to="/events"><SideListItemButton> <ListItemIcon> <EventAvailableIcon /> </ListItemIcon> <ListItemText primary="Events"/></SideListItemButton></Link>
-    <Link to="/rules"><SideListItemButton> <ListItemIcon> <GavelIcon /> </ListItemIcon> <ListItemText primary="Rules"/></SideListItemButton></Link>
-    <Link to="/vehicles"><SideListItemButton> <ListItemIcon> <NoCrashIcon /> </ListItemIcon> <ListItemText primary="Vehicles"/></SideListItemButton></Link>
-    <Link to="/staff"><SideListItemButton> <ListItemIcon> <BadgeIcon /> </ListItemIcon> <ListItemText primary="Staff"/></SideListItemButton></Link>
-    <Link to="/mynotifications"><SideListItemButton> <ListItemIcon> <ReportProblemIcon /> </ListItemIcon> <ListItemText primary="My Notifications"/></SideListItemButton></Link>
-    <Link to="/inventory"><SideListItemButton> <ListItemIcon> <InventoryIcon /> </ListItemIcon> <ListItemText primary="Inventory"/></SideListItemButton></Link>
-    <Link to="/tenants"><SideListItemButton> <ListItemIcon> <PeopleOutlineIcon /> </ListItemIcon> <ListItemText primary="Tenants"/></SideListItemButton></Link>
-    <Link to="/userprofile"><SideListItemButton> <ListItemIcon> <ContactEmergencyIcon /> </ListItemIcon> <ListItemText primary="User Profile"/></SideListItemButton></Link>
+    <Link to="/home"><SideListItemButton className="menu-button"> <ListItemIcon> <DashboardIcon /> </ListItemIcon> <ListItemText primary="Dashboard"/></SideListItemButton></Link>
+    <Link to="/apartments"><SideListItemButton className="menu-button"> <ListItemIcon> <LocationCityIcon /> </ListItemIcon> <ListItemText primary="Apartments"/></SideListItemButton></Link>
+    <Link to="/wings"><SideListItemButton className="menu-button"> <ListItemIcon> <DomainAddIcon /> </ListItemIcon> <ListItemText primary="Wings"/></SideListItemButton></Link>
+    <Link to="/flats"><SideListItemButton className="menu-button"> <ListItemIcon> <EmojiTransportationIcon /> </ListItemIcon> <ListItemText primary="Flats"/></SideListItemButton></Link>
+    <Link to="/members"><SideListItemButton className="menu-button"> <ListItemIcon> <GroupIcon /> </ListItemIcon> <ListItemText primary="Members"/></SideListItemButton></Link>
+    <Link to="/owners"><SideListItemButton className="menu-button"> <ListItemIcon> <GroupAddIcon /> </ListItemIcon> <ListItemText primary="Owners"/></SideListItemButton></Link>
+    <Link to="/accounts"><SideListItemButton className="menu-button"> <ListItemIcon> <ChecklistIcon /> </ListItemIcon> <ListItemText primary="Accounts"/></SideListItemButton></Link>
+    <Link to="/visitors"><SideListItemButton className="menu-button"> <ListItemIcon> <GroupRemoveIcon /> </ListItemIcon> <ListItemText primary="Visitors"/></SideListItemButton></Link>
+    <Link to="/notices"><SideListItemButton className="menu-button"> <ListItemIcon> <MarkEmailUnreadIcon /> </ListItemIcon> <ListItemText primary="Notices"/></SideListItemButton></Link>
+    <Link to="/events"><SideListItemButton className="menu-button"> <ListItemIcon> <EventAvailableIcon /> </ListItemIcon> <ListItemText primary="Events"/></SideListItemButton></Link>
+    <Link to="/rules"><SideListItemButton className="menu-button"> <ListItemIcon> <GavelIcon /> </ListItemIcon> <ListItemText primary="Rules"/></SideListItemButton></Link>
+    <Link to="/vehicles"><SideListItemButton className="menu-button"> <ListItemIcon> <NoCrashIcon /> </ListItemIcon> <ListItemText primary="Vehicles"/></SideListItemButton></Link>
+    <Link to="/staff"><SideListItemButton className="menu-button"> <ListItemIcon> <BadgeIcon /> </ListItemIcon> <ListItemText primary="Staff"/></SideListItemButton></Link>
+    <Link to="/mynotifications"><SideListItemButton className="menu-button"> <ListItemIcon> <ReportProblemIcon /> </ListItemIcon> <ListItemText primary="My Notifications"/></SideListItemButton></Link>
+    <Link to="/inventory"><SideListItemButton className="menu-button"> <ListItemIcon> <InventoryIcon /> </ListItemIcon> <ListItemText primary="Inventory"/></SideListItemButton></Link>
+    <Link to="/tenants"><SideListItemButton className="menu-button"> <ListItemIcon> <PeopleOutlineIcon /> </ListItemIcon> <ListItemText primary="Tenants"/></SideListItemButton></Link>
+    <Link to="/userprofile"><SideListItemButton className="menu-button"> <ListItemIcon> <ContactEmergencyIcon /> </ListItemIcon> <ListItemText primary="User Profile"/></SideListItemButton></Link>
   </React.Fragment>
 );
 

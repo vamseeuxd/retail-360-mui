@@ -72,7 +72,7 @@ const AppLayout: React.FC<Props> = ({ children, changeTheme }) => {
   const renderSideMenu = () => {
     return (
       <SwipeableDrawer onClose={toggleDrawer} onOpen={toggleDrawer} open={open}>
-        <List component="nav">{mainListItems}</List>
+        <List component="nav" style={{width:'250px'}}>{mainListItems}</List>
       </SwipeableDrawer>
     );
   };
