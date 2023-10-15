@@ -24,7 +24,7 @@ export default function Page(props: PageProps) {
         navigate("../home");
       }
     }
-  }, [firebaseUser]);
+  }, [firebaseUser, location.state.from, navigate]);
   return (
     <div
       style={{

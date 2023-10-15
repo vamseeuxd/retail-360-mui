@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import AppLayout from "./AppLayout";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
 import Home from "./pages/home/home";
 import Apartments from "./pages/apartments/apartments";
 import Wings from "./pages/wings/wings";
@@ -24,6 +25,7 @@ import Userprofile from "./pages/userprofile/userprofile";
 import Login from "./pages/login/login";
 import { FirebaseContextProvider } from "./contexts/firebaseContext/firebaseContext";
 import PrivateRoutes from "./utils/PrivateRoutes";
+import SplashScreen from "./components/SplashScreen";
 
 // https://github.com/fireship-io/react-firebase-chat/blob/master/src/App.js
 
@@ -44,6 +46,7 @@ const lightTheme = createTheme({
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [splashScreen, setSplashScreen] = useState(true);
   const changeTheme = (): void => {
     setIsDarkTheme(!isDarkTheme);
   };
@@ -90,11 +93,12 @@ function App() {
         }}
       >
       <Router>
-        <AppLayout changeTheme={changeTheme}>
+        <AppLayout setSplashScreen={setSplashScreen} changeTheme={changeTheme}>
         {renderRoutes()}
         </AppLayout>
       </Router>
       </Box>
+      {splashScreen && <SplashScreen/>}
     </ThemeProvider>
     </FirebaseContextProvider>
   );

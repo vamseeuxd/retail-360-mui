@@ -68,13 +68,30 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 type Props = {
   changeTheme: () => void;
+  setSplashScreen: (value: boolean) => void;
   children?: JSX.Element | JSX.Element[];
 };
 
-const AppLayout: React.FC<Props> = ({ children, changeTheme }) => {
+const AppLayout: React.FC<Props> = ({
+  children,
+  changeTheme,
+  setSplashScreen,
+}) => {
   const [open, setOpen] = React.useState(false);
   const { signOut, firebaseUser } = React.useContext(FirebaseContext);
   const toggleDrawer = () => setOpen(!open);
+
+  React.useEffect(() => {
+    if (firebaseUser) {
+      setTimeout(() => {
+        setSplashScreen(false);
+      }, 2000);
+    } else {
+      setTimeout(() => {
+        setSplashScreen(false);
+      }, 2000);
+    }
+  }, [firebaseUser, setSplashScreen]);
 
   const renderSideMenu = () => {
     return (

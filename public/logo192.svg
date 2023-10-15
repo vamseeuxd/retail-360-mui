@@ -1,0 +1,15 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+    <defs></defs>
+    <g style="" transform="matrix(0.384166, 0, 0, 0.384166, -2.350091, -2.317075)">
+      <path style="fill: rgb(152, 29, 34);" d="M 262.224 231.758 L 231.251 198.572 L 121 187.51 L 222.032 319.885 L 491.575 319.516 L 357.726 141.787 L 196.59 133.307 L 262.224 231.758 Z"></path>
+      <path style="" d="M 189.691 149.162 L 197.803 158.012 L 169.779 192.673 L 153.924 190.829 L 189.691 149.162 Z"></path>
+      <path style="" d="M 115.586 198.439 L 125.43 208.891 L 47.651 303.319 L 47.287 319.847 L 20.429 319.361 L 115.586 198.439 Z"></path>
+      <rect y="286.912" width="16.782" height="15.702" style="" x="105.755"></rect>
+      <rect x="123.755" y="286.912" width="16.782" height="15.702" style=""></rect>
+      <rect x="123.755" y="304.912" width="16.782" height="15.702" style=""></rect>
+      <rect x="105.755" y="304.912" width="16.782" height="15.702" style=""></rect>
+      <path style="" d="M 113.606 268.912 H 122.537 V 284.614 H 105.755 V 276.763 A 7.851 7.851 0 0 1 113.606 268.912 Z" bx:shape="rect 105.755 268.912 16.782 15.702 7.851 0 0 0 1@d3a19d80"></path>
+      <path style="" d="M 123.755 268.912 H 132.686 A 7.851 7.851 0 0 1 140.537 276.763 V 284.614 H 123.755 V 268.912 Z" bx:shape="rect 123.755 268.912 16.782 15.702 0 7.851 0 0 1@d13bc57b"></path>
+      <text style="fill: rgb(152, 29, 34); font-family: Arial, sans-serif; font-size: 57px; white-space: pre;" x="18.939" y="366.538">Dwarakamai Vizag</text>
+    </g>
+  </svg>
